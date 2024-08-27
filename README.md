@@ -1,33 +1,34 @@
-# Company Data Enrichment
+# Enrichify
 
-This project extracts company data from an SQLite database, enriches it using the LinkedIn Bulk Data Scraper API, and stores the enriched data in a new table.
+Enrichify is a Python project that extracts company data from an SQL database, enriches it using the LinkedIn Bulk Data Scraper API, and stores the enriched data in a new database table.
 
-## Files
+## Features
 
-- `setup_db.py`: Script to set up the database and insert initial data.
-- `main.py`: Script to retrieve and enrich company data using LinkedIn Bulk Data Scraper API.
+- Extracts company information from a SQLite database.
+- Uses the LinkedIn Bulk Data Scraper API to enrich company data.
+- Stores enriched data in a new database table.
 
-## Requirements
+## Installation
 
-- Python 3.x
-- Requests library (`pip install requests`)
-- SQLite
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/enrichify.git
+    cd enrichify
+    ```
+
+2. Install the required Python packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
-1. Run `setup_db.py` to set up the database and insert initial data:
-   ```bash
-   python setup_db.py
+1. Set up the database:
+    ```bash
+    python setup_db.py
+    ```
 
-
-
-
-### Additional Tips
-
-- **.gitignore**: Consider adding a `.gitignore` file to exclude files that should not be included in the repository (e.g., virtual environment files, database files). For example:
-
-  ```bash
-  __pycache__/
-  *.pyc
-  *.pyo
-  *.db
+2. Run the main script to fetch and enrich data:
+    ```bash
+    python main.py
+    ```
